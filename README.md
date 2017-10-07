@@ -10,7 +10,7 @@ Hecho por:
 
 
 
-Pequeña Demo de programación de sockets en java.
+pequeña Demo de programación de sockets en java.
 
 El propósito de este proyecto es ilustrar la forma de implementar la conexión de dos máquinas en java.
 
