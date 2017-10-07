@@ -8,7 +8,7 @@ import java.net.Socket;
 // YodafyServidorIterativo
 // (CC) jjramos, 2012
 //
-public class YodafyServidorIterativo {
+public class Servidor {
 
 	public static void main(String[] args) {
 	
@@ -24,6 +24,7 @@ public class YodafyServidorIterativo {
 			//////////////////////////////////////////////////
 			// ...serverSocket=... (completar)
 			//////////////////////////////////////////////////
+			ServerSocket socketServidor = new ServerSocket(port);
 			
 			// Mientras ... siempre!
 			do {
@@ -32,12 +33,12 @@ public class YodafyServidorIterativo {
 				/////////////////////////////////////////////////
 				// socketServicio=... (completar)
 				//////////////////////////////////////////////////
-				
+				Socket socketServicio = socketServidor.accept();
 				// Creamos un objeto de la clase ProcesadorYodafy, pasándole como 
 				// argumento el nuevo socket, para que realice el procesamiento
 				// Este esquema permite que se puedan usar hebras más fácilmente.
-				ProcesadorYodafy procesador=new ProcesadorYodafy(socketServicio);
-				procesador.procesa();
+				Pregunton pregunton=new Pregunton(socketServicio);
+				pregunton.procesa();
 				
 			} while (true);
 			
